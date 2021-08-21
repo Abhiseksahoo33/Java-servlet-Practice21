@@ -58,6 +58,8 @@
   <listener>
     <listener-class>com.java.listeners.AppContextListener</listener-class>
   </listener>
-
+  <listener>
+    <listener-class>com.java.listeners.RequestContextListener</listener-class>
+  </listener>
 
 </web-app>
