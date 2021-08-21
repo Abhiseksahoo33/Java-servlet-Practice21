@@ -55,7 +55,9 @@
     <url-pattern>/*</url-pattern>  // for every request
   </filter-mapping>
 
-
+  <listener>
+    <listener-class>com.java.listeners.AppContextListener</listener-class>
+  </listener>
 
 
 </web-app>
