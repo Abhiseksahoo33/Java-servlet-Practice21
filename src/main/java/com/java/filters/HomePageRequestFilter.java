@@ -1,9 +1,9 @@
 package com.java.filters;
 
-import javax.servlet.*;
-import java.io.IOException;
+        import javax.servlet.*;
+        import java.io.IOException;
 
-public class ApplicationRequestFilter implements Filter {  // it should implements javax.servlet , there are many filters
+public class HomePageRequestFilter implements Filter {  // it should implements javax.servlet , there are many filters
 
 
     @Override
@@ -17,7 +17,7 @@ public class ApplicationRequestFilter implements Filter {  // it should implemen
         System.out.println("before"+ this.getClass());
 
         //validate / modify request
-         filterChain.doFilter(servletRequest,servletResponse); // either to next filter if present or else to the servlet
+        filterChain.doFilter(servletRequest,servletResponse); // either to next filter if present or else to the servlet
 
         //validate /modify response
         System.out.println("after"+ this.getClass());
