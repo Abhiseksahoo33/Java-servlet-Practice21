@@ -17,6 +17,9 @@ public class HomePageServlet extends HttpServlet {
 
 
         resp.getWriter().write("Home Page");
+        Thread currentThread = Thread.currentThread();
+        System.out.println("current thread: "+currentThread);
+
 
     }
 }
