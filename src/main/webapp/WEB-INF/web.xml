@@ -5,28 +5,34 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-
+<servlet>
+  <servlet-name>home</servlet-name>
+  <servlet-class>com.java.servlets.HomePageServlet</servlet-class>
+</servlet>
   <servlet>
-    <servlet-name>testServlet-helloworld</servlet-name>
-    <servlet-class>com.java.servlets.TestServlet</servlet-class>
-
+    <servlet-name>about_us</servlet-name>
+    <servlet-class>com.java.servlets.AboutUsServlet</servlet-class>
   </servlet>
 
-  <servlet>
-    <servlet-name>coursesServlet-helloworld</servlet-name>
-    <servlet-class>com.java.servlets.SubjectsServlet</servlet-class>
-
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>testServlet-helloworld</servlet-name>
-    <url-pattern>/example</url-pattern>
-  </servlet-mapping>
 
 
   <servlet-mapping>
-    <servlet-name>coursesServlet-helloworld</servlet-name>
-    <url-pattern>/example1</url-pattern>
+    <servlet-name>home</servlet-name>
+    <url-pattern>/home</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>about_us</servlet-name>
+    <url-pattern>/about-us</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>applicationFilter</filter-name>
+    <filter-class>com.java.filters.ApplicationRequestFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>applicationFilter</filter-name>
+    <url-pattern>/* </url-pattern>  // for every request
+  </filter-mapping>
 </web-app>
