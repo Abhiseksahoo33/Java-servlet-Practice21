@@ -14,6 +14,12 @@
     <servlet-class>com.java.servlets.AboutUsServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>ServletLifeCycle</servlet-name>
+    <servlet-class>com.java.servlets.ServletLifeCycle</servlet-class>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>home</servlet-name>
     <url-pattern>/home</url-pattern>
@@ -22,6 +28,11 @@
   <servlet-mapping>
     <servlet-name>about_us</servlet-name>
     <url-pattern>/about-us</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ServletLifeCycle</servlet-name>
+    <url-pattern>/servlet-life-cycle</url-pattern>
   </servlet-mapping>
 
   <filter>
