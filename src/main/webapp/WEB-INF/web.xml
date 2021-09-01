@@ -17,8 +17,14 @@
   <servlet>
     <servlet-name>ServletLifeCycle</servlet-name>
     <servlet-class>com.java.servlets.ServletLifeCycle</servlet-class>
-    <load-on-startup>2</load-on-startup>
+    <load-on-startup>1</load-on-startup>
   </servlet>
+
+  <servlet>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <servlet-class>com.java.servlets.EmployeeServlet</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>home</servlet-name>
@@ -34,6 +40,12 @@
     <servlet-name>ServletLifeCycle</servlet-name>
     <url-pattern>/servlet-life-cycle</url-pattern>
   </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <url-pattern>/employee</url-pattern>
+  </servlet-mapping>
+
 
   <filter>
     <filter-name>applicationFilter</filter-name>
